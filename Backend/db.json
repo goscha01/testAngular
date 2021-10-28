@@ -1,0 +1,133 @@
+{
+  "createClient": [
+    {
+      "id": 1,
+      "clientDetails": {
+        "firstName": "bhavan",
+        "lastName": "sai",
+        "middleName": "sai",
+        "mobile": 7674013548,
+        "tradeName": "skylines",
+        "license": "AZ1234567890987",
+        "email": "sai",
+        "language": "English"
+      },
+      "businessDetails": {
+        "vehicleType": "truck",
+        "goodsType": "sai",
+        "businessWebsite": "https://www.saitraders.com",
+        "insuranceCompany": "UIC",
+        "policyNumber": 12345678,
+        "licenseValidity": "5"
+      },
+      "paymentDetails": {
+        "paymentType": "Stored Voucher",
+        "totalAmount": 45000,
+        "voucherCode": "dedede"
+      }
+    },
+    {
+      "clientDetails": {
+        "firstName": "divi",
+        "lastName": "sushma",
+        "middleName": "hyd",
+        "mobile": 1234567890,
+        "tradeName": "skylines",
+        "license": "AZ1234567890987",
+        "email": "sai",
+        "language": "English"
+      },
+      "businessDetails": {
+        "vehicleType": "tow-truck",
+        "goodsType": "sai",
+        "businessWebsite": "https: //www.sushmatravels.com",
+        "insuranceCompany": "lic",
+        "policyNumber": 12345678,
+        "licenseValidity": "10"
+      },
+      "paymentDetails": {
+        "paymentType": "Prepaid",
+        "totalAmount": 45000,
+        "voucherCode": "undefined"
+      }
+    },
+    {
+      "clientDetails": {
+        "firstName": "hrithik",
+        "lastName": "sai",
+        "middleName": "sai",
+        "mobile": 7674013548,
+        "tradeName": "skylines",
+        "license": "AZ1234567890987",
+        "email": "sai",
+        "language": "French"
+      },
+      "businessDetails": {
+        "vehicleType": "truck",
+        "goodsType": "sai",
+        "businessWebsite": "https://www.hrx.com",
+        "insuranceCompany": "UIC",
+        "policyNumber": 12345678,
+        "licenseValidity": "5"
+      },
+      "paymentDetails": {
+        "paymentType": "Stored Voucher",
+        "totalAmount": 45000,
+        "voucherCode": "dedede"
+      },
+      "id": 2
+    },
+    {
+      "clientDetails": {
+        "firstName": "John",
+        "lastName": "Paul",
+        "middleName": "Wright",
+        "mobile": 7674016754,
+        "tradeName": "John Traders",
+        "license": "AP1234567891123",
+        "email": "john@gmail.com",
+        "language": "Hindi"
+      },
+      "businessDetails": {
+        "vehicleType": "Bus",
+        "goodsType": "Yes",
+        "businessWebsite": "https://www.johntravels.com",
+        "insuranceCompany": "National Insurance",
+        "policyNumber": 2344532222,
+        "licenseValidity": "5"
+      },
+      "paymentDetails": {
+        "paymentType": "Prepaid",
+        "totalAmount": 50000,
+        "voucherCode": 50000
+      },
+      "id": 3
+    },
+    {
+      "clientDetails": {
+        "firstName": "jake",
+        "lastName": "blinder",
+        "middleName": "",
+        "mobile": 7684443332,
+        "tradeName": "Jack Ma Travels",
+        "license": "AP3232333333333",
+        "email": "jack@yahoo.com",
+        "language": "English"
+      },
+      "businessDetails": {
+        "vehicleType": "TowTruck",
+        "goodsType": "Yes",
+        "businessWebsite": "http://www.jacktraders.com",
+        "insuranceCompany": "LIC",
+        "policyNumber": 32333333,
+        "licenseValidity": "5"
+      },
+      "paymentDetails": {
+        "paymentType": "Prepaid",
+        "totalAmount": 75000,
+        "voucherCode": 75000
+      },
+      "id": 4
+    }
+  ]
+}

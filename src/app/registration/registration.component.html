@@ -1,0 +1,56 @@
+<br>
+
+<div class="container">
+
+  <!-- Add the necessary text here as displayed in instruction document in h4 and p tags -->
+  <h1>Application for Commercial Vehicle Operator Registration (CVOR) Individual</h1>
+</div>
+
+
+<div class="container overflow-hidden">
+    <div class="row gx-5">
+      <div class="col">
+       <div class="p-3 border bg-light" >
+
+          <!-- Create a div element to proceed to path 'register/client' on clicking it -->
+            <!-- Hint: You may add routerLink to div element directly -->
+        <div routerLink = "[{ outlets: { user: ['/register/client'] } } ]">
+          Add New Client
+        </div>
+
+
+       </div>
+
+
+      </div>
+      <div class="col">
+        <div class="p-3 border bg-light">
+
+             <!-- Create a div element to proceed to path 'register/business' on clicking it -->
+             <div routerLink = "[{ outlets: { user: ['/register/business'] } } ]">
+              Business Information
+            </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="col">
+        <div class="p-3 border bg-light">
+            <!-- Create a div element to proceed to path 'register/payment' on clicking it -->
+            <div [routerLink] = "[{ outlets: { user: ['/register/payment'] } } ]" >
+              Payment Information
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<div  class="container">
+  <router-outlet name='user'></router-outlet>
+
+  <!-- <app-client-registration></app-client-registration> -->
+</div>
+  <!-- Templates of components loaded using routing should appear here ! -->
+

@@ -1,0 +1,63 @@
+<br>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                <!-- Mention Appropriate heading for the component  -->
+                <h1>Fetch Component</h1>
+                <h1>Check your Application Component</h1>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                   <form class="d-flex">
+    <!-- Display search bar to filter details based on Trade Name -->
+    <!-- Hint: create input control of search type with necessary placeholder and
+               2-way bind it to 'query' property -->
+      <input type="search" name=
+    'query' placeholder="Search by Business Trade Name" [(ngModel)]="query" >
+      <a>{{ query }}</a>
+      </form>
+            </div>
+        </div>
+
+
+
+        <br>
+        <br>
+        <div class='row'>
+            <table class="table table-light">
+              <thead>
+                <tr>
+                  <th scope="col">Order Number</th>
+                  <th>Name</th>
+                  <th>Trade Name</th>
+                  <th>Licence Number</th>
+                  <th>Language</th>
+                  <th>Vechicle Type</th>
+                  <th>Business Website</th>
+                  <th>Payment type</th>
+                </tr>
+
+              </thead>
+              <tbody *ngFor="let item of applicationDetails; let i = index" [attr.data-index]="i">
+                <tr>
+                  <th>{{ i+1 }}</th>
+                  <td>{{ item.clientDetails.firstName }} {{ item.clientDetails.lastName }}</td>
+                  <td>{{ item.clientDetails.tradeName }}</td>
+                  <td>{{ item.clientDetails.license }}</td>
+                  <td>{{ item.clientDetails.language }}</td>
+                  <td>{{ item.businessDetails.vehicleType }}</td>
+                  <td>{{ item.businessDetails.businessWebsite }}</td>
+                  <td>{{ item.paymentDetails.paymentType }}</td>
+                </tr>
+              </tbody>
+    <!-- Create a table as per Instruction Document Point 12 and display all appropriate fields from applicationDetails object -->
+    <!-- Pass iterable values to custom pipe 'search' and pass the 'query' parameter to filter out results -->
+
+            </table>
+        </div>
+    </div>
+</div>
