@@ -1,27 +1,16 @@
-# TestAngular1
+![3](https://user-images.githubusercontent.com/43910293/139491014-0a696413-cc93-49b3-921e-422bad8409b7.PNG)
+![4](https://user-images.githubusercontent.com/43910293/139491158-68be2534-687e-48a8-a83c-1d297334074e.PNG)
+![5](https://user-images.githubusercontent.com/43910293/139491172-7e5ee605-b9eb-4053-a01e-2b1494159982.PNG)
+![6](https://user-images.githubusercontent.com/43910293/139491186-bff95cfb-4798-4bb7-a58f-d5deafeee407.PNG)
+![7](https://user-images.githubusercontent.com/43910293/139491192-9cfce20a-d594-4eed-bb72-6168b01f3265.PNG)
+![8](https://user-images.githubusercontent.com/43910293/139491200-3848f73d-e911-4159-b2bf-481b231138c8.PNG)
+![9](https://user-images.githubusercontent.com/43910293/139491207-3f4ba03d-bafe-448a-9ec0-f7922a5da9b2.PNG)
+![10](https://user-images.githubusercontent.com/43910293/139491213-5449b38a-8322-40aa-a677-9a61d56dbf75.PNG)
+![11](https://user-images.githubusercontent.com/43910293/139491221-396d1ae4-106c-4369-9840-9cbe6774b6e3.PNG)
+![12](https://user-images.githubusercontent.com/43910293/139491229-35341232-94aa-4ba1-9cdd-97040b579e30.PNG)
+![13](https://user-images.githubusercontent.com/43910293/139491234-4e9ebd86-3003-4ea2-b0f5-6fa4a1abb84a.PNG)
+![14](https://user-images.githubusercontent.com/43910293/139491243-77ed885c-41f1-4eb2-9e32-a9a400811afa.PNG)
+![15](https://user-images.githubusercontent.com/43910293/139491254-a6d64f0c-8b34-42cb-9ff1-293b0ddb5e50.PNG)
+![16](https://user-images.githubusercontent.com/43910293/139491261-6501a5a4-0155-4feb-b82a-6d028f0efb68.PNG)
+![17](https://user-images.githubusercontent.com/43910293/139491275-cd6f3175-21ab-4751-8017-4bd4d37b7a7c.PNG)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
