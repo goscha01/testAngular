@@ -12,9 +12,12 @@ export const userRoutes: Routes = [
       path:'',
       children: [
 
-        {path:'client',component:ClientRegistrationComponent, outlet: 'user'},
-        {path:'business',component:BusinessDetailsComponent, outlet: 'user'},
-        {path:'payment',component:PaymentDetailsComponent, outlet: 'user'},
+        {path:'client',component:ClientRegistrationComponent},
+        {path:'business',component:BusinessDetailsComponent},
+        {path:'payment',component:PaymentDetailsComponent},
+        // {path:'client',component:ClientRegistrationComponent, outlet: 'user'},
+        // {path:'business',component:BusinessDetailsComponent, outlet: 'user'},
+        // {path:'payment',component:PaymentDetailsComponent, outlet: 'user'},
         {path:'', component:RegistrationComponent, pathMatch: 'full'},
            ]
     }
