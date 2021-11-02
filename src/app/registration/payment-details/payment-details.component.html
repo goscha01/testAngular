@@ -19,7 +19,7 @@
         <button [disabled]="state">Save</button>
     <div class="form-group" >
       <label for="voucherCode" class="control-label">Vaucher Code</label>
-      <input name='voucherCode' [attr.disabled]='state' class="form-control" type='text'   formControlName='voucherCode' >
+      <input name='voucherCode' [disabled]='state' class="form-control" type='text'   formControlName='voucherCode' >
       <p *ngIf="registerForm.controls.voucherCode.errors
       && (registerForm.controls.voucherCode.dirty || registerForm.controls.voucherCode.touched)"
       class="alert alert-danger">Check voucher code format!</p>
