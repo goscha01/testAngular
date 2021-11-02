@@ -28,9 +28,9 @@ export class BusinessDetailsComponent implements OnInit {
       //Hint: you can retain the value of form control using businessDetails object for eg: vehicleType: [this.businessDetails ? this.businessDetails.vehicleType : '']
       vehicleType: ['', Validators.required],
       goodsType: ['', Validators.required],
-      businessWebsite: ['', [Validators.required, Validators.pattern('^(http[s]?://){0,1}(www.){0,1}[a-zA-Z0-9.-]+.[a-zA-Z]{2,5}[.]{0,1}')]],
-      insuranceCompany: ['', Validators.required],
-      policyNumber: ['', [Validators.required, Validators.pattern('^[0-9]{8,10}$')]],
+      businessWebsite: ['https://www.kitchenplanner.ikea.com/', [Validators.required, Validators.pattern('^(http[s]?://){0,1}(www.){0,1}[a-zA-Z0-9.-]+.[a-zA-Z]{2,5}[.]{0,1}')]],
+      insuranceCompany: ['someCompany', Validators.required],
+      policyNumber: ['123456789', [Validators.required, Validators.pattern('^[0-9]{8,10}$')]],
       licenseValidity: ['', Validators.required]
 
     });

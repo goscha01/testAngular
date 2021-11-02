@@ -1,50 +1,78 @@
-
 <div class="container">
   <app-registration></app-registration>
   <!-- Add appropriate sub-headings as shown in instructions in h5 & p tags respectively -->
   <h1>Payment Details Component</h1>
   <form [formGroup]="registerForm">
-    <div class='row'>
-      <div class='col'>
+    <div class="row">
+      <div class="col">
         <div class="form-group">
-            <label for="paymentType" class="control-label">Payment Type</label>
-            <select class="form-select"  name='paymentType' type='text'  formControlName='paymentType' required>
-              <option value="Voucher">Stored Vaucher</option>
-              <option value="Prepaid">Prepaid</option>
-            </select>
-            <p *ngIf="registerForm.controls.paymentType.errors
-            && (registerForm.controls.paymentType.dirty || registerForm.controls.paymentType.touched)"
-            class="alert alert-danger">This field is required!</p>
+          <label for="paymentType" class="control-label">Payment Type</label>
+          <select
+            class="form-select"
+            name="paymentType"
+            type="text"
+            (change)="displayVoucher($event)"
+            formControlName="paymentType"
+            required
+          >
+            <option value="Voucher">Stored Vaucher</option>
+            <option value="Prepaid">Prepaid</option>
+          </select>
+          <p
+            *ngIf="
+              registerForm.controls.paymentType.errors &&
+              (registerForm.controls.paymentType.dirty ||
+                registerForm.controls.paymentType.touched)
+            "
+            class="alert alert-danger"
+          >
+            This field is required!
+          </p>
         </div>
-        <button [disabled]="state">Save</button>
-    <div class="form-group" >
-      <label for="voucherCode" class="control-label">Vaucher Code</label>
-      <input name='voucherCode' [disabled]='state' class="form-control" type='text'   formControlName='voucherCode' >
-      <p *ngIf="registerForm.controls.voucherCode.errors
-      && (registerForm.controls.voucherCode.dirty || registerForm.controls.voucherCode.touched)"
-      class="alert alert-danger">Check voucher code format!</p>
-    </div>
-      </div>
-      <div class='col'>
+
         <div class="form-group">
-      <label for="totalAmount" class="control-label">Toral Amount</label>
-      <input name='totalAmount'class="form-control"  defaultValue="orderValue" type='text'  formControlName='totalAmount' required>
-    </div>
+          <label for="voucherCode" class="control-label">Vaucher Code</label>
+          <input
+            name="voucherCode"
+            class="form-control"
+            type="text"
+            formControlName="voucherCode"
+          />
+          <p
+            *ngIf="
+              registerForm.controls.voucherCode.errors &&
+              (registerForm.controls.voucherCode.dirty ||
+                registerForm.controls.voucherCode.touched)
+            "
+            class="alert alert-danger"
+          >
+            Check voucher code format!
+          </p>
+        </div>
       </div>
-
-
+      <div class="col">
+        <div class="form-group">
+          <label for="totalAmount" class="control-label">Toral Amount</label>
+          <input
+            name="totalAmount"
+            class="form-control"
+            defaultValue="orderValue"
+            type="text"
+            formControlName="totalAmount"
+            required
+          />
+        </div>
+      </div>
     </div>
-
 
     <!-- Add labels and necessary form controls by attaching appropriate validation messages  -->
     <!-- Validation Messages should be displayed appropriately and appear only if user touched the field for eg: registerForm.controls.paymentType.errors  && registerForm.get('paymentType').touched -->
-
-
   </form>
   <br />
-<!-- Uncomment the Below Code for Modal Pop-up & calling submitDetails() method -->
+  <input type='submit'  class="btn btn-primary" value="Proceed" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <!-- Uncomment the Below Code for Modal Pop-up & calling submitDetails() method -->
 
-  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -55,14 +83,11 @@
           Submit Application for Processing ?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Review</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" [routerLink]="['/register/client']">Review</button>
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
             (click)="submitDetails()">Submit</button>
         </div>
       </div>
     </div>
-  </div> -->
-
-
-
+  </div>
 </div>
