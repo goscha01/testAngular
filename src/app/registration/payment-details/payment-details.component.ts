@@ -19,7 +19,7 @@ export class PaymentDetailsComponent implements OnInit {
   registrationDetails!: RegistrationModel;
   paymentDetails!: PaymentModel;
   orderValue: number = 456;
-
+  state: boolean = true
 
   constructor(private formBuilder: FormBuilder, private service: RegistrationService, private router: Router) {
 
@@ -69,15 +69,19 @@ export class PaymentDetailsComponent implements OnInit {
       //Hint: you can disable a form control while initializing for eg: username: [{ value: 'sai', disabled: true }]
       paymentType: ['', Validators.required],
       totalAmount: [{value: this.orderValue, disabled: true}],
-      voucherCode: [{value:'', disabled: true}, [Validators.pattern('^[a-zA-Z0-9]{1,10}$')]]
+      voucherCode: ['', [Validators.pattern('^[a-zA-Z0-9]{1,10}$')]]
 
     });
   }
 
-  displayVoucher() {
+  displayVoucher(event) {
+
+    // return this.registerForm.get('paymentType').value === '' || 'Prepaid' ?   false : true
 
     //Enable voucherCode Form Control only if paymentType is selected as 'Stored Voucher'
 
+    const input = this.registerForm.get('voucherCode')
+    event.target.value === 'Prepaid'? input.disable():input.enable()
 
   }
 
