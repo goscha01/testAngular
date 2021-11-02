@@ -1,8 +1,12 @@
+
+
 <div class="container">
   <div class="row">
+    <app-registration></app-registration>
       <div class="col-md-10">
           <!-- Add appropriate sub-headings as shown in instructions in h5 & p tags respectively -->
           <!-- use <span style=color:red>*</span> to display red star for mandatory field -->
+
           <h1>Client Registration Component</h1>
       </div>
       <div class="col-md-2">
@@ -29,14 +33,14 @@
               <th>Email Address</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngIf="clientDetails">
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>{{ clientDetails.firstName }}</td>
+              <td>{{ clientDetails.lastName }}</td>
+              <td>{{ clientDetails.middleName }}</td>
+              <td>{{ clientDetails.license }}</td>
+              <td>{{ clientDetails.mobile }}</td>
+              <td>{{ clientDetails.email }}</td>
             </tr>
           </tbody>
       </table>
@@ -46,6 +50,7 @@
       <div class="col-md-6">
           <!-- Proceed button should be enabled only if clientDetails is defined and call proceedtoBusiness() method on click of it. -->
           <!-- Make sure proceed button is input element with type 'submit' -->
+          <input type='submit' [disabled]="!submitted" class="btn btn-primary" value="Proceed" (click)="proceedtoBusiness()">
 
       </div>
   </div>
@@ -141,9 +146,9 @@
                             <input type='text' class='form-control' defaultValue='English' formControlName='language' required>
                           </div>
                           <div class="btn-toolbar" role="toolbar">
-                            <input type='submit' class="btn btn-primary" (click)="submitClientDetails()">
                             <input type='button' value='Cancel' class='btn btn-secondary' data-bs-dismiss="modal">
-                            <input type='button' value='Business Information' class='btn btn-secondary' (click)="proceedtoBusiness()" data-bs-dismiss="modal">
+                            <input type='submit' class="btn btn-primary" value="Submit" (click)="submitClientDetails()" data-bs-dismiss="modal">
+
                           </div>
 
 

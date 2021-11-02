@@ -5,3 +5,8 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
 }
+
+.btn{
+  padding: 5px;
+  margin: 5px;
+}

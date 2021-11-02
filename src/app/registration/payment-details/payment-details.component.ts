@@ -18,7 +18,7 @@ export class PaymentDetailsComponent implements OnInit {
   registerForm: FormGroup = new FormGroup({});
   registrationDetails!: RegistrationModel;
   paymentDetails!: PaymentModel;
-  orderValue!: number;
+  orderValue: number = 456;
 
 
   constructor(private formBuilder: FormBuilder, private service: RegistrationService, private router: Router) {
@@ -26,14 +26,39 @@ export class PaymentDetailsComponent implements OnInit {
 
     // check whether paymentDetails of service class is empty , if not assign to component's paymentDetails property to make sure input values are retained
 
-
+    this.service.paymentDetails ? null : this.service.paymentDetails = this.paymentDetails
 
   }
 
   ngOnInit(): void {
-
+    console.log(this.service.clientDetails)
+    console.log(this.service.businessDetails)
     //Make sure clientDetails and businessDetails of service are defined & calculate orderValue as per Instructions Document Point 10 .
     // Hint: you need to convert licenseValidity to Number before making an arithmetic operation
+
+    if (this.service.clientDetails && this.service.businessDetails) {
+
+          if (this.service.businessDetails.vehicleType === 'Bus') {
+            if (this.service.businessDetails.licenseValidity === '5')
+                this.orderValue = 5 * 10000
+            else
+                this.orderValue = 10 * 10000
+          }
+          else if (this.service.businessDetails.vehicleType === 'Track') {
+              if (this.service.businessDetails.licenseValidity === '5')
+                this.orderValue = 5 * 20000
+              else
+                this.orderValue = 10 * 20000
+          } else if (this.service.businessDetails.vehicleType === 'TowTrack') {
+            if (this.service.businessDetails.licenseValidity === '5')
+              this.orderValue = 5 * 15000
+            else
+              this.orderValue = 10 * 15000
+        } else {
+          this.orderValue = 5
+        }
+    }
+
 
 
 
@@ -42,7 +67,9 @@ export class PaymentDetailsComponent implements OnInit {
 
       //Define Form Controls as per Instruction Document Point 9 and inject necessary validations and values
       //Hint: you can disable a form control while initializing for eg: username: [{ value: 'sai', disabled: true }]
-
+      paymentType: ['', Validators.required],
+      totalAmount: [{value: this.orderValue, disabled: true}],
+      voucherCode: [{value:'', disabled: true}, [Validators.pattern('^[a-zA-Z0-9]{1,10}$')]]
 
     });
   }

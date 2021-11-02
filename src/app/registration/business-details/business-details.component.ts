@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-business-details',
   templateUrl: './business-details.component.html',
-
+  styleUrls: ['./business-details.component.css']
 })
 export class BusinessDetailsComponent implements OnInit {
 
@@ -18,7 +18,7 @@ export class BusinessDetailsComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private service: RegistrationService, private router: Router) {
 
     // check whether  businessDetails of service class is empty , if not assign to component's  businessDetails property to make sure input values are retained
-
+    this.service.businessDetails ? null : this.service.businessDetails = this.businessDetails
 
   }
 
@@ -26,8 +26,12 @@ export class BusinessDetailsComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       //Define Form Controls as per Instruction Document Point 7 and inject necessary validations and values
       //Hint: you can retain the value of form control using businessDetails object for eg: vehicleType: [this.businessDetails ? this.businessDetails.vehicleType : '']
-
-
+      vehicleType: ['', Validators.required],
+      goodsType: ['', Validators.required],
+      businessWebsite: ['', [Validators.required, Validators.pattern('^(http[s]?://){0,1}(www.){0,1}[a-zA-Z0-9.-]+.[a-zA-Z]{2,5}[.]{0,1}')]],
+      insuranceCompany: ['', Validators.required],
+      policyNumber: ['', [Validators.required, Validators.pattern('^[0-9]{8,10}$')]],
+      licenseValidity: ['', Validators.required]
 
     });
 
@@ -37,7 +41,10 @@ export class BusinessDetailsComponent implements OnInit {
   submitBusinessDetails() {
 
     // Assign Form Control Values to businessDetail object of component and then assign the object  to businessDetail of the service class
+    this.businessDetails = this.registerForm.value
+    this.service.businessDetails = this.registerForm.value
 
+    console.log(this.businessDetails)
 
   }
 
@@ -45,7 +52,7 @@ export class BusinessDetailsComponent implements OnInit {
   proceedtoPayment() {
 
     //user should navigate to /register/payment path
-
+    this.router.navigate(['/register/payment']);
 
   }
 

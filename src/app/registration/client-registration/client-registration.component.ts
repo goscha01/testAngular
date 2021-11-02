@@ -23,7 +23,9 @@ export class ClientRegistrationComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private service: RegistrationService, private router: Router) {
 
-    service.clientDetails ? null : service.clientDetails = this.clientDetails
+    this.service.clientDetails ? null : this.service.clientDetails = this.clientDetails
+
+
     // check whether clientDetails of service class is empty , if not assign to component's clientDetails property to make sure input values are retained
 
   }
@@ -47,15 +49,11 @@ export class ClientRegistrationComponent implements OnInit {
 
 
   submitClientDetails() {
-    if (this.submitted) {
-        console.log('clicked')
-        console.log(this.registerForm.controls.license.errors)
-    }
     // Assign Form Control Value  s to clientDetails property of component and then assign the object  to clientDetails property of the service class
-    console.log('clicked')
-    console.log(this.registerForm)
     this.clientDetails = this.registerForm.value
-    console.log(this.clientDetails)
+    this.service.clientDetails = this.clientDetails
+    this.submitted = true
+
   }
 
 
